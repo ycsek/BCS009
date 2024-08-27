@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.27)  27 AUG 2024 16:29
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.27)  27 AUG 2024 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -103,8 +103,7 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count271
 \g__pdf_backend_annotation_int=\count272
 \g__pdf_backend_link_int=\count273
-)
-No file Q1.aux.
+) (./Q1.aux)
 \openout1 = `Q1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -117,7 +116,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5.
-(c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 5.
@@ -127,7 +126,10 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
- [1
+
+Missing character: There is no   ("A0) in font cmr10!
+Missing character: There is no   ("A0) in font cmr10!
+[1
 
 ] (./Q1.aux)
  ***********
@@ -136,10 +138,10 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1239 strings out of 474773
- 19452 string characters out of 5761289
+ 1242 strings out of 474773
+ 19485 string characters out of 5761289
  1923842 words of memory out of 5000000
- 23452 multiletter control sequences out of 15000+600000
+ 23453 multiletter control sequences out of 15000+600000
  558531 words of font info for 39 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,5n,65p,212b,123s stack positions out of 10000i,1000n,20000p,200000b,200000s
