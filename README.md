@@ -1,5 +1,10 @@
-# BCS009
-BCS009 is a course in Data Structures and Algorithms offered by the Faculty of Data Science of the City University of Macau
+# BCS009 Data Structure and Algorithms
 
-This repositories was created by Jason
+## Author: Yuchen Shi
+
+BCS009 is a course in Data Structure and Algorithms offered by the Faculty of Data Science of the City University of Macau.
+
+Recording academic year: 2024-2025
+
+
 
