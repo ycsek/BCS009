@@ -1,0 +1,238 @@
+%% CityU Macau Homework Template
+%% Author: Yuchen Shi
+%% GitHub:https://github.com/ycsek/CityU-Macau-Latex-Template
+%% Created on 2024/09/08
+
+%% Modified on the basis of ‘PKU course paper template’.
+%% Original author：Shawn Wang
+%% Overleaf：https://www.overleaf.com/latex/templates/bei-jing-da-xue-ke-cheng-lun-wen-mo-ban/yntmqcktrzfh
+
+%% Modified on the basis of ‘UCAS course paper template’.
+%% Original author：He Junwei
+%% Overleaf：https://www.overleaf.com/latex/templates/zhong-guo-ke-xue-yuan-da-xue-ke-cheng-lun-wen-mo-ban/nphpxhhqvnds
+
+%% Modified on the basis of ‘RUC course report template’.
+%% Original author：xxmy7
+%% License：Apache-2.0 license
+%% GitHub：https://github.com/xxmy7/RUC_Report_Latex_Template
+%% Overleaf：https://www.overleaf.com/latex/templates/ruc-report-latex-template/hhwhvvwczbnm
+
+
+
+\ProvidesPackage{CityUhomework}
+
+%% margin
+\RequirePackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+
+%% some essential packages
+\RequirePackage[unicode=true,colorlinks,urlcolor=blue,linkcolor=blue,bookmarksnumbered=blue]{hyperref}
+\RequirePackage{latexsym,amssymb,amsmath,amsbsy,amsopn,amstext,amsthm,amsxtra,color,bm,calc,ifpdf}
+\RequirePackage{datetime}
+\RequirePackage{graphicx}
+\RequirePackage{enumerate}
+\RequirePackage{fancyhdr}
+\RequirePackage{listings}
+\RequirePackage{multirow}
+\RequirePackage{makeidx}
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+\RequirePackage{subfigure}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\RequirePackage{pythonhighlight}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\RequirePackage{tcolorbox}
+
+\RequirePackage{fontawesome}
+
+\RequirePackage{caption}
+%% Remove the colon in the icon title and change the separator to a space
+% or:
+% \captionsetup{labelformat=default,labelsep=space} %Remove colon
+\captionsetup[table]{labelsep=space} 
+\captionsetup[figure]{labelsep=space}  
+
+%% change the style of the word summary
+\renewcommand{\abstractname}{\textbf{\large {Abstract}}}
+
+%% fixable underline length
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+
+%% Modify some Chinese references of autoref
+\def\equationautorefname{式}
+\def\footnoteautorefname{脚注}
+\def\itemautorefname{项}
+\def\figureautorefname{图}
+\def\tableautorefname{表}
+\def\partautorefname{篇}
+\def\appendixautorefname{附录}
+\def\chapterautorefname{章}
+\def\sectionautorefname{节}
+\def\subsectionautorefname{小小节}
+\def\subsubsectionautorefname{subsubsection}
+\def\paragraphautorefname{段落}
+\def\subparagraphautorefname{子段落}
+\def\FancyVerbLineautorefname{行}
+\def\theoremautorefname{定理}
+
+\newtheorem{Theorem}{定理}[section]
+\newtheorem{Lemma}[Theorem]{引理}
+\newtheorem{Corollary}[Theorem]{推论}
+\newtheorem{Proposition}[Theorem]{命题}
+\newtheorem{Definition}[Theorem]{定义}
+\newtheorem{Example}[Theorem]{例}
+
+%% Reference Setting
+\newcommand{\reference}{
+    %\nocite{*}   %Turning on this option will list all references in bib
+    \bibliographystyle{unsrt} %Provides for the format of references
+    \begin{center}%centering
+        \bibliography{reference} %Calling up LaTeX to generate a list of references
+    \end{center}
+}
+
+%% Textbox Settings
+\newcommand{\tbox}[1]{
+    \begin{center}
+        \begin{tcolorbox}[colback=gray!10,%gray background
+                colframe=black,% black frame colour
+                width=8cm,% Use 8cm total width,
+                arc=1mm, auto outer arc,
+                boxrule=0.5pt,
+            ]
+            {#1}
+        \end{tcolorbox}
+    \end{center}
+}
+
+%% Header Settings
+\pagestyle{fancy}
+\fancyhead[L]{BCS009}% Left header, leave it blank or it won't show
+\fancyhead[C]{Assignment 05}% Centre header, leave it blank or it won't show
+\fancyhead[R]{石雨宸}% Right hand side header, leave it blank or it won't show
+
+% %% Catlog Settings
+% \renewcommand{\contentsname}{\textbf{\large {Contents}}}
+
+% %% Reference Settings
+% \renewcommand{\refname}{\textbf{\large {References}}}
+
+%% Cover Settings
+\title{
+    \vspace{1.5cm}
+    \Huge \textbf{{Data Structure and Algorithms BCS009}} \par
+    \vspace{1cm}
+    \Large {Assignment 05}
+    \vspace{1.5cm} }
+
+\author{
+    \vspace{0.5cm}
+    \Large   Faculty:\ \dlmu[9cm]{Faculty of Data Science} \qquad \\
+    \vspace{0.5cm}
+    \Large Major:\ \dlmu[9cm]{Computer Science} \qquad \\
+    \vspace{0.5cm}
+    \Large Name:\ \dlmu[9cm]{Yuchen Shi} \qquad \\
+    \vspace{0.5cm}
+    \Large  Student ID:\ \dlmu[9cm]{D23090120503} \qquad  \\
+    \vspace{0.5cm}
+    \date {\today}  \\
+}
+
+%% Changeable  logo
+\newcommand{\cover}{
+    %% School name logo on the front cover, images are in the figures folder
+    \begin{figure}
+        \centering
+        \vspace{2cm}
+        \includegraphics[width=0.80\textwidth]{figures/cityu.pdf}
+    \end{figure}
+
+    \maketitle
+}
+
+% define the color of the code
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\definecolor{keywordcolor}{rgb}{0.8,0.1,0.5}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{bgcolor}{rgb}{0.92,0.92,0.92}
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+\lstset{
+    breaklines = true,                                   % automatic line break
+    extendedchars=false,                               
+    columns=fixed,       
+    numbers=left,                                        % line number position
+    basicstyle=\ttfamily,
+    numberstyle=\small,
+    frame=none,                                         % no frame
+    % backgroundcolor=\color[RGB]{245,245,244},         % set background color
+    keywordstyle=\color[RGB]{40,40,255},                % keyword color
+    numberstyle=\footnotesize\color{darkgray},          
+    commentstyle=\it\color[RGB]{0,96,96},
+    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   
+    showstringspaces=false,                             
+    % frame=leftline,topline,rightline, bottomline       
+    frame=shadowbox,                                    
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    basewidth=0.6em,
+}
+
+\lstdefinestyle{CPP}{
+    language=c++,                                        % language
+    morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+    reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+    dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+    char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+    void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+    const,false,private,this,while,constexpr,float,protected,thread_local,
+    const_cast,for,public,throw,std},
+    emph={map,set,multimap,multiset,unordered_map,unordered_set,
+    unordered_multiset,unordered_multimap,vector,string,list,deque,
+    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+    random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+    emphstyle=\color{CPPViolet}, 
+}
+
+
+\lstdefinestyle{Python}{
+    language=Python,
+}
+
