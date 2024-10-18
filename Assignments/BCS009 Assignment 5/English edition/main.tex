@@ -114,11 +114,18 @@
     
     
 \end{lstlisting}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/fig1.png}
     \caption{运行结果}
 \end{figure}
+\begin{itemize}
+    \item next[0] = -1，表示没有匹配。
+    \item 比较第 1 个字符 b 和第 0 个字符 a，不匹配，next[1] = 0
+    \item 比较第 2 个字符 a 和第 0 个字符 a，匹配，next[2] = 0
+    \item 比较第 3 个字符 b 和第 1 个字符 b，匹配，next[3] = 1
+    \item 比较第 4 个字符 a 和第 2 个字符 a，匹配，next[4] = 2
+    \item 比较第 5 个字符 a 和第 2 个字符 a，匹配，next[5] = 3
+\end{itemize}
 
 \end{document}
